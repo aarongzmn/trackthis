@@ -2,9 +2,11 @@
 This library can be used to track USPS and UPS shipments. 
 It will return a standardized response containing basic tracking data by default. This is meant to make it easier when working with both UPS and USPS responses.
 
+It maximizes performance by using async HTTP requests, as well as using bulk tracking (when supported by the carrier endpoints).
+
 ## Track UPS Orders
 ```
-tracking_number_list = ["Z100", "Z101", Z102", "Z103", Z104", "Z105"]
+tracking_number_list = ["Z100", "Z101", "Z102", "Z103", Z104", "Z105"]
 
 ups_username = os.getenv("UPS_USERNAME")
 ups_password = os.getenv("UPS_PASSWORD")
@@ -26,7 +28,7 @@ print(tracking_results[0])
 
 ## Track USPS Orders
 ```
-tracking_number_list = ["Z100", "Z101", Z102", "Z103", Z104", "Z105"]
+tracking_number_list = ["9100", "9101", "9102", "9103", 9104", "9105"]
 
 usps_username = os.getenv("USPS_USERID")
 company_name = "Clothing Shop Online"
