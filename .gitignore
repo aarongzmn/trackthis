@@ -127,3 +127,9 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# Test Files
+*.xlsx
+*.csv
+*.ipynb
+tracking_test.py
